@@ -1,1 +1,1 @@
-# SiteWeb JS Made By *Sularec Pierre*
+# Site Web JS Made By **Sularec Pierre**
