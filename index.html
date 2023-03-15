@@ -86,6 +86,7 @@
 
       const selection = document.getElementById("dropdown");
 
+      selection.value = '1';
       
 
       verse2.hidden = true;
@@ -101,14 +102,14 @@
 
               verse2.hidden = true;
               verse3.hidden = true;
-            } else if(selection.value == '2'){
+            } else if(selection.value === '2'){
                 verse2.hidden = false;
 
                 verse1.hidden = true;
                 verse3.hidden = true;
               }
 
-              else if(selection.value == '3'){
+              else if(selection.value === '3'){
                   verse3.hidden = false;
 
                   verse1.hidden = true;
@@ -117,6 +118,25 @@
         })
 
      
+
+        const promise = new Promise((resolve, reject) =>{
+          setTimeout(() => {
+              const randomNumber = Math.floor(Math.random() * 10)
+              if (randomNumber % 2 === 0) {
+                  resolve(randomNumber)
+                 
+              } else {
+                  reject(new Error('Le nombre est impair.'))
+              }
+              
+            
+          }, 1000)
+          
+      })
+      promise 
+          .then(result => console.log(result))
+          .catch(error => console.error(error.message))
+      
 
 
       
