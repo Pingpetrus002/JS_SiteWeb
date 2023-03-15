@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/stylesheet.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="src/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -45,22 +46,86 @@
     </nav>
 
     <!-- NavBar -->
+    <div class="container">
+    
 
+    
+      
+      <div class="dropdown mt-4 text-center">
 
-    <h1 class="text-center mt-3">Bouton Dropdown</h1>
-    <div class="row justify-content-center">
-      <div class="dropdown mt-4">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Options
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Option 1</a>
-          <a class="dropdown-item" href="#">Option 2</a>
-          <a class="dropdown-item" href="#">Option 3</a>
-        </div>
+          <form>
+            <label class="text-center" for="dropdown">Choisi un verset</label>
+            <select class="form-control text-center mt-2" name="dropdown" id="dropdown">
+
+              <option name="abc" value="1" selected>Verse 1</option>
+              <option name="abc" value="2">Verse 2</option>
+              <option name="abc" value="3">Verse 3</option>
+            
+            </select>
+          </form>
       </div>
+    
+
+      <p id="verse1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    
+      <p id="verse2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+      <p id="verse3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
     </div>
 
+
+    <script>
+
+      const verse1 = document.getElementById("verse1");
+      const verse2 = document.getElementById("verse2");
+      const verse3 = document.getElementById("verse3");
+
+
+
+
+
+      const selection = document.getElementById("dropdown");
+
+      
+
+      verse2.hidden = true;
+      verse3.hidden = true;
+
+      
+
+
+
+      selection.addEventListener('change', () => {
+            if (selection.value === '1') {
+              verse1.hidden = false;
+
+              verse2.hidden = true;
+              verse3.hidden = true;
+            } else if(selection.value == '2'){
+                verse2.hidden = false;
+
+                verse1.hidden = true;
+                verse3.hidden = true;
+              }
+
+              else if(selection.value == '3'){
+                  verse3.hidden = false;
+
+                  verse1.hidden = true;
+                  verse2.hidden = true;
+                }
+        })
+
+     
+
+
+      
+
+
+
+
+
+    </script>
 
 </body>
 </html>
