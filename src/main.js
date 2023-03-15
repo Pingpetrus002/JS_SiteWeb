@@ -30,6 +30,9 @@ function verse(){
 
     }
     
+    
+    
+    
     const promise = new Promise((resolve, reject) =>{
       setTimeout(() => {
           const randomNumber = Math.floor(Math.random() * 10)
@@ -49,12 +52,36 @@ function verse(){
         .catch(error => console.error(error.message))
     
     
+    const logPoke = (index, list) =>{
+
+        for(i = 0; i < index; i++ ){
+
+            console.log(list.results[i].name);
+
+
+        }
+
+    }
+    
     function fetchSomePokemon(){
       return fetch('https://pokeapi.co/api/v2/pokemon?limit=200');
     }
     
-    const pokemons = fetchSomePokemon();
-    console.log(pokemons)
+    fetchSomePokemon().then((httpResponse) => {
+
+        console.log("httpResponse : ", httpResponse)
+        return httpResponse.json()
+
+    }).then((pokemonList) =>{
+
+        logPoke(2, pokemonList);
+
+
+    });
+
+
+    
+    console.log()
 
 
     verse();
