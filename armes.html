@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="armes.html">Armes</a>
@@ -35,50 +35,61 @@
     </nav>
 
     <!-- NavBar -->
-    <div class="container">
+    <div class="container text-center">
     
 
-      <h1 class="text-center mt-3">Maps Valorant</h1>
 
-      <p class="text-center mt-5 mb-5" id="afficher"><button type="button" id="btn-click" class="btn btn-primary">Afficher</button></p>
+
+      <h1 class="text-center mt-3 mb-5">Armes Valorant</h1>
+
 
       <!-- Creation de mes div pour innerHTLM -->
 
 
-      <div class="row ">
+      <label class="text-center" for="select-option">Choisissez une Armes :</label>
+      <br>
 
-        <div id="map1" class="col-md-3">
+        <select id="dropdown" class="text-center">
+          <option id='1' value="1" selected></option>
+          <option id='2' value="2"></option>
+          <option id='3' value="3"></option>
+          <option id='4' value="4"></option>
+        </select>
 
 
 
 
+      <div class=" mt-5 justify-content-center" style="display: flex;
+      justify-content: center;">
+
+
+        
+
+        <div id="arme1" class="card" style="width: 15rem;">
+        
+        
         </div>
 
 
-        <div id="map2" class="col-md-3">
+
+        
 
 
-
-
-          
+        <div id="arme2" class="card" style="width: 15rem;">
+        
+        
         </div>
 
 
-        <div id="map3" class="col-md-3">
-
-
-
-          
+        <div id="arme3" class="card" style="width: 15rem;">
+        
+        
         </div>
 
 
-        <div id="map4" class="col-md-3">
-
-          
-
-
-
-          
+        <div id="arme4" class="card" style="width: 15rem;">
+        
+        
         </div>
 
         
@@ -90,7 +101,7 @@
       
 
 
-    <script src="src/main.js"></script>
+    <script src="src/weapons.js"></script>
 
 </body>
 </html>
