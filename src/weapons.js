@@ -67,10 +67,12 @@ fetchPhotos().then((httpResponse) => {
     //Affichage des noms et des images
 
 
-    arme1.innerHTML = "<img class='w-100' id='arme1' src='" + tabUrl[0] + "'>  <br> <p class='text-center mt-4'>"+ tabName[0] +" </p> <br> <p class='text-center'>Cout : "+ tabCost[0] +"</p>  <br> <p class='text-center'>Fire Rate : "+ tabDegat[0] +"</p>";
-    arme2.innerHTML = "<img class='w-100' id='arme1' src='" + tabUrl[1] + "'>  <br> <p class='text-center mt-5'>"+ tabName[1] +"</p> <br> <p class='text-center '>Cout : "+ tabCost[1]  +"</p> <br> <p class='text-center'>Fire Rate : "+ tabDegat[1] +"</p>";                                                 
-    arme3.innerHTML = "<img class='w-100' id='arme1' src='" + tabUrl[2] + "'>  <br> <p class='text-center mt-4'>"+ tabName[2] +"</p> <br> <p class='text-center '>Cout : "+ tabCost[2]  +"</p> <br> <p class='text-center'>Fire Rate : "+ tabDegat[2] +"</p>";
-    arme4.innerHTML = "<img class='w-100' id='arme1' src='" + tabUrl[3] + "'>  <br> <p class='text-center mt-4'>"+ tabName[3] +"</p> <br> <p class='text-center '>Cout : "+ tabCost[3]  +"</p> <br> <p class='text-center'>Fire Rate : "+ tabDegat[3] +"</p>";
+
+    arme1.innerHTML = "<img class='w-100' id='arme1' src='" + tabUrl[0] + "'>  <br> <h5 class='text-center card-title mt-4'>"+ tabName[0] +" </h5> <br>     <ul class='list-group list-group-flush'><li class='list-group-item'>"+ tabCost[0] +" Credit</li><li class='list-group-item'>"+ tabDegat[0] +" Fire-Rate</li></ul>";
+
+    arme2.innerHTML = "<img class='w-100' id='arme1' src='" + tabUrl[1] + "'>  <br> <h5 class='text-center card-title mt-4'>"+ tabName[1] +" </h5>  <br><ul class='list-group list-group-flush'><li class='list-group-item'>"+ tabCost[1] +" Credit</li><li class='list-group-item'>"+ tabDegat[1] +" Fire-Rate</li></ul>";
+    arme3.innerHTML = "<img class='w-100' id='arme1' src='" + tabUrl[2] + "'>  <br> <h5 class='text-center card-title mt-4'>"+ tabName[2] +" </h5>  <br> <ul class='list-group list-group-flush'><li class='list-group-item'>"+ tabCost[2] +" Credit</li><li class='list-group-item'>"+ tabDegat[2] +" Fire-Rate</li></ul>";
+    arme4.innerHTML = "<img class='w-100' id='arme1' src='" + tabUrl[3] + "'>  <br>  <h5 class='text-center card-title mt-4'>"+ tabName[3] +" </h5>  <br> <ul class='list-group list-group-flush'><li class='list-group-item'>"+ tabCost[3] +" Credit</li><li class='list-group-item'>"+ tabDegat[3] +" Fire-Rate</li></ul>";
 
 
     a1.textContent = tabName[0];

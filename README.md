@@ -9,7 +9,7 @@ Le site web est composé de deux pages :
 - **Page 1 : Cartes**
     - Cette page affiche quatre cartes de Valorant qui peuvent être cachées ou affichées en cliquant sur un bouton.
 - **Page 2 : Armes**
-    - Cette page affiche quatre cards avec des informations sur les armes de Valorant, y compris leur coût, leur taux de tir, leur image et leur nom.
+    - Cette page affiche quatre cards avec des informations sur les armes de Valorant, y compris leur coût, leur taux de tir, leur image et leur nom. Un DropDown Permet de selectionner l'arme
 
 ## Technologies utilisées
 
